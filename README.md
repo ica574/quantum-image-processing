@@ -21,7 +21,7 @@ The aforementioned methods suffer from several issues related to encoding and de
 # Implementation
 
 ## Qubit Initialisation
-This project will utilise _FRQI_ together with a _QFT_ circuit. Firstly, all qubits will be initialised, before which each is brought into _superposition_. The intensities of pixels will then be encoded by _rotating_ the generated superposition states. Thus, this part will require _Hadamard_, _phase shift_, and _CNOT_ gates combined.
+This project will utilise _FRQI_ together with a _QFT_ circuit. Firstly, all qubits will be initialised, after which each is brought into _superposition_. The intensities of pixels will then be encoded by _rotating_ the generated superposition states. Thus, this part will require _Hadamard_, _phase shift_, and _CNOT_ gates combined.
 
 ## Applying the QFT
 After all qubits are initialised and encoded with information, they will then be subject to the _QFT circuit_. The fact that _FRQI_ is being utilised, will facilitate the application of the _QFT_ since the algorithm acts natively on _probability amplitudes_. For this, the same types of gates as used in _FRQI_ will be used.
