@@ -5,7 +5,6 @@
 
 """NumPy packages"""
 import numpy as np
-from numpy import pi
 """OpenCV package"""
 import cv2
 """IBM Qiskit package"""

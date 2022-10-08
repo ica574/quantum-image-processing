@@ -3,13 +3,11 @@
 # Date: 04/10/2022
 # Description: Implements the QFT circuit as detailed in the README.
 
-"""Necessary libraries"""
+"""NumPy packages"""
 import numpy as np
 from numpy import pi
-from qiskit import QuantumCircuit, transpile, assemble, Aer, IBMQ
-from qiskit.providers.ibmq import least_busy
-from qiskit.tools.monitor import job_monitor
-from qiskit.visualization import plot_histogram, plot_bloch_multivector
+"""Qiskit package"""
+from qiskit import QuantumCircuit
 
 def rotations(quantum_circuit, n): # Installs necessary rotation gates onto an empty circuit
     if n == 0: # Returns finalised generated circuit upon meeting the last qubit
