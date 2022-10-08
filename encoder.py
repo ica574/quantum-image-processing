@@ -27,16 +27,3 @@ def encode_image(image_array): # Encodes image from file into a quantum circuit
             pass
         n += 1 # Continues to encode the next qubit
     return quantum_circuit # Returns the finalised quantum circuit
-
-def encode_number(integer): # Encodes a base-10 number into a quantum circuit
-    binary_number = str(bin(integer)[2:]) # Translates base-10 number into binary
-    print(binary_number)
-    quantum_circuit = QuantumCircuit(len(binary_number)) # Generates a quantum circuit depending on resultant length of binary number
-    n = 0 # Starts encoding from first qubit
-    for bit in binary_number:
-        if bit == '1':
-            quantum_circuit.x(n) # Applies Pauli-X gate to encode a '1' if met in binary number
-        elif bit == '0':
-            pass
-        n += 1 # Continues to the next qubit
-    return quantum_circuit # Returns encoded number in a quantum circuit
