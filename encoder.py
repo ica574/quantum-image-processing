@@ -17,10 +17,10 @@ def image_to_binary(path): # Converts image to binary and presents data in a fla
     image_array = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY)[1]
     return image_array.flatten(order='C') # Returns flattened image pixel values in a row-wise manner
 
-def encode_image(image_array): # Encodes image from file into a quantum circuit
-    quantum_circuit = QuantumCircuit(image_array.size) # Creates a new circuit with enough qubits to hold the image
+def basis_encode(array): # Encodes array into a quantum circuit via computational basis states
+    quantum_circuit = QuantumCircuit(array.size) # Creates a new circuit with enough qubits to hold the image
     n = 0 # Begins encoding from 0th qubit
-    for bit in image_array:
+    for bit in array:
         if bit == 255: # Applies Pauli-X gate to qubit to represent coloured value
             quantum_circuit.x(n)
         elif bit == 0:

@@ -10,9 +10,9 @@ from qiskit.visualization import plot_bloch_multivector
 import matplotlib.pyplot as plt
 """Circuit and encoder packages"""
 from circuit import qft
-from encoder import encode_image, image_to_binary
+from encoder import basis_encode, image_to_binary
 
-circuit = encode_image(image_to_binary("test.png")) # Encodes an image onto a quantum circuit
+circuit = basis_encode(image_to_binary("test.png")) # Encodes an image onto a quantum circuit
 simulator = Aer.get_backend("aer_simulator") # Qiskit Aer simulator instantiation
 
 """Computational basis qubits"""
